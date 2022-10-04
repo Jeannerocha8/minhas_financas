@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-mf text-white px-6 w-full shadow-md">
+  <div class="bg-mf text-white px-6 w-full shadow-md fixed  top-0 z-50">
     <div class="flex justify-between items-center h-14">
       <a href="/">
-        <h1>Teste</h1>
+        <h1>Minhas Finanças</h1>
       </a>
       <div class="flex items-center cursor-pointer">
         <p class="mx-1.5"><font-awesome-icon icon="fa-solid fa-bars" /></p>
