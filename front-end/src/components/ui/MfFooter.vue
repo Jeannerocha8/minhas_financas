@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full">
+  <div class="h-full p-8">
     <p class="text-white text-center text-sm">Developed with 🤍, by Jeanne</p>
   </div>
 </template>

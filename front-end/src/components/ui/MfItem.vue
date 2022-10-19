@@ -5,8 +5,7 @@
       <div v-for="item in data.items">
         <div class="flex flex-row mb-4">
           <div class="flex flex-row">
-            <div
-                class="shadow-3xl bg-gradient-to-r from-mf-500 to-mf-400 rounded-xl w-12	h-12 flex justify-center items-center mr-4">
+            <div class="shadow-3xl bg-gradient-to-r from-mf-500 to-mf-400 rounded-xl w-12	h-12 flex justify-center items-center mr-4">
               <font-awesome-icon class="text-white font-bold" :icon="item.icon" />
             </div>
             <div class="w-48">

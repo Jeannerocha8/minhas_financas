@@ -1,11 +1,20 @@
 <template>
-  <div class="bg-mf text-white px-6 w-full shadow-md fixed  top-0 z-50">
+  <div id="app" class="bg-mf text-white px-6 w-full shadow-md fixed  top-0 z-50">
     <div class="flex justify-between items-center h-14">
       <a href="/">
         <h1>Minhas Finanças</h1>
       </a>
-      <div class="flex items-center cursor-pointer">
-        <p class="mx-1.5"><font-awesome-icon icon="fa-solid fa-bars" /></p>
+      <div class="flex relative items-center cursor-pointer">
+        <button class="mx-1.5" @click="handleMenu()"><font-awesome-icon icon="fa-solid fa-bars" /></button>
+        <div v-if="openMenu"
+             class="w-34 h-36 pl-4 pr-4 bg-gradient-to-bl from-mf-500 to-mf-400 rounded-b-lg absolute inset-y-10 right-8 shadow-lg">
+          <div class="flex flex-col">
+            <router-link to="/expense" @click="handleMenu" class="mt-2">Despesas</router-link>
+            <router-link to="/income" @click="handleMenu" class="mt-2">Receitas</router-link>
+            <router-link to="/investments" @click="handleMenu" class="mt-2">Investimentos</router-link>
+            <router-link to="/investments" @click="handleMenu" class="mt-2">Configurações</router-link>
+          </div>
+        </div>
         <p class="mx-1.5"><font-awesome-icon icon="fa-solid fa-arrow-right-from-bracket" /></p>
       </div>
     </div>
@@ -15,5 +24,15 @@
 <script>
 export default {
   name: 'mf-header',
+  data() {
+    return {
+      openMenu: false,
+    }
+  },
+  methods: {
+    handleMenu() {
+      return !this.openMenu ? this.openMenu = true : this.openMenu = false
+    }
+  }
 }
 </script>
