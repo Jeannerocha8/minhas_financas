@@ -1,7 +1,7 @@
 <template>
   <div class="m-8 mt-6 min-h-screen flex justify-center">
     <div class="px-8 mt-20 shadow-3xl bg-gradient-to-r from-mf-500 rounded-xl w-3/4 h-full">
-      <div class="pt-8 pb-8">
+      <div class="pt-8 pb-8 relative">
         <h1 class="font-bold mb-6 text-2xl">Nova Despesa</h1>
         <label class="mb-4">Descrição: </label>
         <input
@@ -43,8 +43,8 @@
           </div>
         </div>
 
-        <div class="flex justify-between mt-8">
-          <div class="flex flex-col">
+        <div class="flex justify-between my-8">
+          <div class="flex flex-col mb-4">
             <label>Situação: </label>
             <div class="inline-flex">
               <button class="bg-mf-300 hover:bg-gray-400 px-4 rounded-l h-10">
@@ -78,8 +78,7 @@
             </select>
           </div>
         </div>
-
-        <button class="mt-8 focus:none bg-mf-900 hover:bg-mf-400 p-2 rounded w-24 justify-self-end">Salvar</button>
+        <button class="absolute bottom-0 right-0 mb-4 focus:none bg-mf-300 hover:bg-mf-500 p-2 rounded w-24 justify-self-end">Salvar</button>
       </div>
     </div>
   </div>
