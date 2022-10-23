@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="bg-mf text-white px-6 w-full shadow-md fixed  top-0 z-50">
+  <div id="app" v-if="showHeader" class="bg-mf text-white px-6 w-full shadow-md fixed  top-0 z-50">
     <div class="flex justify-between items-center h-14">
       <a href="/">
         <h1>Minhas Finanças</h1>
@@ -27,6 +27,12 @@ export default {
   data() {
     return {
       openMenu: false,
+      showHeader: true,
+    }
+  },
+  mounted() {
+    if (this.$route.fullPath == '/login') {
+      this.showHeader = false;
     }
   },
   methods: {
