@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-    @apply bg-mf-900 text-mf-150;
+    @apply bg-mf-900 text-mf-100;
 }
 
 #app {

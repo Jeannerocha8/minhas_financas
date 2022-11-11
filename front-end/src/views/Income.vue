@@ -5,7 +5,7 @@
         <h1 class="font-bold mb-6 text-2xl">Nova Receita</h1>
         <label class="mb-4">Descrição: </label>
         <input
-            class="bg-transparent border rounded p-2 border-mf-200 w-full text-gray-700 mr-3 leading-tight focus:outline-none"
+            class="bg-transparent border rounded p-2 border-mf-200 w-full mr-3 leading-tight focus:outline-none"
             type="text"
             placeholder="Insira aqui a descrição da despesa"
         >
@@ -27,7 +27,7 @@
           <div class="w-full flex flex-col ml-8 mb-10">
             <label>Valor:</label>
             <input
-                class="bg-transparent border rounded p-2 border-mf-200 w-full text-gray-700 mr-3 leading-tight focus:outline-none w-full"
+                class="bg-transparent border rounded p-2 border-mf-200 w-full mr-3 leading-tight focus:outline-none w-full"
                 type="text"
                 placeholder="R$ 0,00"
             >
@@ -36,7 +36,7 @@
           <div class="w-full flex flex-col ml-8">
             <label>Data de Recebimento:</label>
             <input
-                class="bg-transparent border rounded p-2 border-mf-200 w-full text-gray-700 mr-3 leading-tight focus:outline-none w-full"
+                class="bg-transparent border rounded p-2 border-mf-200 w-full mr-3 leading-tight focus:outline-none w-full"
                 type="text"
                 placeholder="18/10/2022"
             >
