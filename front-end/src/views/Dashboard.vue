@@ -2,7 +2,7 @@
   <div class="mt-6 min-h-screen">
     <div class="flex justify-between px-8 mt-20 m-4">
       <div>
-        <p class="text-xl font-medium">Bem Vindo(a), {{ data.username }}</p>
+        <p class="text-xl font-medium">Bem Vindo(a), {{ userName }}</p>
       </div>
       <div>
         <div class="rounded-md flex justify-end items-center relative ">
@@ -36,7 +36,7 @@ export default {
   data() {
     return {
       data: {
-        username: 'Maria Clara',
+        userName: '',
         itemsCard: {
           transactions: {
             title: 'Últimas transações',
@@ -108,6 +108,9 @@ export default {
         },
       },
     }
-  }
+  },
+  beforeCreate() {
+    this.userName = this.$route.params.userName.split(' ').slice(0, 1).join(' ');
+  },
 }
 </script>

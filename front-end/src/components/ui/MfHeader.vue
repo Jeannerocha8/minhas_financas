@@ -14,13 +14,16 @@
             <router-link to="/investments" @click="handleMenu" class="mt-2">Configurações</router-link>
           </div>
         </div>
-        <p class="mx-1.5"><font-awesome-icon icon="fa-solid fa-arrow-right-from-bracket" /></p>
+        <p class="mx-1.5" @click="logout()"><font-awesome-icon icon="fa-solid fa-arrow-right-from-bracket" /></p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
+axios.defaults.withCredentials = true;
+
 export default {
   name: 'mf-header',
   data() {
@@ -37,7 +40,16 @@ export default {
   methods: {
     handleMenu() {
       return !this.openMenu ? this.openMenu = true : this.openMenu = false
+    },
+    logout() {
+      axios.post('http://localhost/api/logout').then(response => {
+        this.$router.push({ name: 'login'})
+      }).catch(error => {
+        this.messageError = error
+        this.seeMessageError = true
+      });
     }
+
   }
 }
 </script>
