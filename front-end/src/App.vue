@@ -1,5 +1,5 @@
 <template class="ellipse">
-  <mf-header v-if="nameRoute != 'login'" />
+  <mf-header v-if="nameRoute != 'login' &&  nameRoute != 'registration'" />
   <router-view/>
   <mf-footer v-if="nameRoute != 'login'" />
 </template>

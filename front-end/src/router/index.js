@@ -4,10 +4,11 @@ import Dashboard from "../views/Dashboard.vue";
 import Expense from "../views/Expense.vue";
 import Income from "../views/Income.vue";
 import Login from "../views/Login.vue";
+import Registration from "../views/Registration.vue";
 
 const routes = [
   {
-    path: '/dashboard',
+    path: '/dashboard/:userName',
     name: 'dashboard',
     component: Dashboard
   },
@@ -25,6 +26,11 @@ const routes = [
     path: '/login',
     name: 'login',
     component: Login
+  },
+  {
+    path: '/registration',
+    name: 'registration',
+    component: Registration
   }
 ]
 

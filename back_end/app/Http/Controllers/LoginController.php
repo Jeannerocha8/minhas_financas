@@ -23,9 +23,23 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return 'success';
+            return Auth::user();
+        } else {
+            return 'ocorreu um erro';
         }
 
-       return 'ocorreu um erro';
+    }
+
+    public function logout(Request $request)
+    {
+        try {
+            Auth::logout();
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+            return response()->json('ok', 201);
+        } catch (\Error $error) {
+            return response()->json('error', 401);
+        }
+
     }
 }
