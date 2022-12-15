@@ -1,17 +1,5 @@
 <template>
-  <div v-if="seeMessageError" class="static">
-    <div class="absolute top-16 left-96 w-1/2 h-auto rounded-lg bg-mf-200">
-      <div class="p-2 flex flex-row">
-        <p class="m-1 text-sm">{{ messageError }}</p>
-      </div>
-      <div
-          @click="seeMessageError=false"
-          class="absolute -top-2 inset-y-1 -right-1 bg-mf-300 w-6 h-6 rounded-full shadow-3xl">
-        <font-awesome-icon icon="fa-solid fa-xmark" class="ml-2" />
-      </div>
-    </div>
-  </div>
-
+  <mf-message :see-message="seeMessageError ? true : false" :message="'Erro ao efetual login'" :icon="['fa', 'circle-exclamation']"/>
   <div class="mt-40 relative">
     <div class="absolute inset-1/4 w-1/2 p-8 rounded-lg h-96 shadow-3xl bg-gradient-to-br from-mf-500 to-mf-400 flex flex-col">
       <div class="flex justify-center mb-2">
@@ -47,10 +35,12 @@
 
 <script>
 import axios from "axios";
-axios.defaults.withCredentials = true;
+import MfMessage from "../components/ui/MfMessage.vue";
 
+axios.defaults.withCredentials = true;
 export default {
   name: 'Login',
+  components: {MfMessage},
   data() {
     return {
       email: '',
