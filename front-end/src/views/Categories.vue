@@ -65,7 +65,7 @@
           </tr>
         </thead>
         <tbody class="text-left">
-          <tr v-for="category in categories" class="bg-mf-300">
+          <tr v-for="category in handleCategoryFilter" class="bg-mf-300">
             <th class="border border-mf-200 text-center"><font-awesome-icon :icon="['fa-solid', category.icon]" class="m-2"/></th>
             <th class="border border-mf-200 text-center">{{ category.title }}</th>
             <th class="border border-mf-200">
@@ -139,16 +139,22 @@ export default {
       ]
     }
   },
+  computed: {
+    handleCategoryFilter: function () {
+      if (this.search) {
+        return this.categories.filter(
+            (category) =>
+                category.title.toLowerCase().includes(this.search.toLowerCase())
+        );
+      } else {
+        return this.categories
+      }
+    },
+  },
   mounted() {
     this.fetchCategories();
   },
   methods: {
-    handleCategoryFilter: function (search) {
-      this.categories = this.categories.filter(
-          (category) =>
-              category.title.toLowerCase().includes(search.toLowerCase())
-      );
-    },
     fetchCategories()
     {
       axios.get('http://localhost/sanctum/csrf-cookie').then(response => {
@@ -212,7 +218,7 @@ export default {
             this.iconMessage = 'circle-exclamation';
           });
       });
-    },
+    }
   }
 }
 </script>
