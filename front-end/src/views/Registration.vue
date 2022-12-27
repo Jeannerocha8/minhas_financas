@@ -38,8 +38,8 @@
 </template>
 
 <script>
-import axios from "axios";
 import MfMessage from "../components/ui/MfMessage.vue";
+import axios from "axios";
 
 axios.defaults.withCredentials = true;
 
@@ -63,7 +63,6 @@ export default {
           email: this.email,
           password: this.password,
         }).then(response => {
-          console.log('localhost/api/user/store',response);
           this.messageError = 'Cadastrado com Sucesso'
           this.seeMessageError = true;
         }).catch(error => {
