@@ -212,7 +212,7 @@ export default {
             this.iconMessage = 'circle-exclamation';
           });
       });
-    }
+    },
   }
 }
 </script>
