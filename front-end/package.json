@@ -16,10 +16,12 @@
     "apexcharts": "^3.35.5",
     "autoprefixer": "^10.4.11",
     "axios": "^1.2.0",
+    "font-awesome-picker": "^2.0.0",
     "postcss": "^8.4.16",
     "vue": "^3.2.37",
     "vue-apexcharts": "^1.6.2",
     "vue-axios": "^3.5.2",
+    "vue-font-awesome-picker": "^0.1.2",
     "vue-router": "^4.0.3",
     "vue3-apexcharts": "^1.4.1"
   },

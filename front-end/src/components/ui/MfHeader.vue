@@ -6,8 +6,9 @@
       </a>
       <div class="flex relative items-center cursor-pointer">
         <button class="mx-1.5" @click="handleMenu()"><font-awesome-icon icon="fa-solid fa-bars" /></button>
-        <div v-if="openMenu" class="w-34 h-36 pl-4 pr-4 bg-gradient-to-bl from-mf-500 to-mf-400 rounded-b-lg absolute inset-y-10 right-8 shadow-lg">
+        <div v-if="openMenu" class="w-34 h-52 pl-4 pr-4 bg-gradient-to-bl from-mf-500 to-mf-400 rounded-b-lg absolute inset-y-10 right-8 shadow-lg">
           <div class="flex flex-col">
+            <router-link to="/categories" @click="handleMenu" class="mt-2">Gerenciar Categorias</router-link>
             <router-link to="/expense" @click="handleMenu" class="mt-2">Despesas</router-link>
             <router-link to="/income" @click="handleMenu" class="mt-2">Receitas</router-link>
             <router-link to="/investments" @click="handleMenu" class="mt-2">Investimentos</router-link>

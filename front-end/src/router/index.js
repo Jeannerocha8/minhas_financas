@@ -5,6 +5,7 @@ import Expense from "../views/Expense.vue";
 import Income from "../views/Income.vue";
 import Login from "../views/Login.vue";
 import Registration from "../views/Registration.vue";
+import Categories from "../views/Categories.vue";
 
 const routes = [
   {
@@ -31,7 +32,12 @@ const routes = [
     path: '/registration',
     name: 'registration',
     component: Registration
-  }
+  },
+  {
+    path:'/categories',
+    name: 'categories',
+    component: Categories
+  },
 ]
 
 const router = createRouter({
