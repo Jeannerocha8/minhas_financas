@@ -13,6 +13,7 @@ class CategoryController extends Controller
     {
         $user = Auth::user();
         $categories = app(CategoryRepository::class)->getCategoriesByUserId($user->id);
+
         return response()->json($categories);
     }
 
@@ -47,10 +48,5 @@ class CategoryController extends Controller
         } catch (\Exception $error) {
             return response()->json($error);
         }
-    }
-
-    public function update($categoryId)
-    {
-
     }
 }
